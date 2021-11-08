@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Roboto+Slab"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    
+    <link rel="stylesheet" href="style.css" />
+   
+
+
+    <title>Successful Purchase</title>
+  </head>
+  <body>
+    <div id="slideout-menu">
+      <ul>
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="Solutions.html">Solutions</a>
+        </li>
+        <li>
+          <a href="Parts.html">Parts</a>
+        </li>
+        <li>
+          <a href="Login.html">Login</a>
+        </li>
+        <li>
+          <input type="text" placeholder="Search Here" />
+        </li>
+      </ul>
+    </div>
+
+    <nav>
+      <div id="logo-img">
+        <a href="index.html">
+          <img src="img/Car Error System Logo.png" alt="CES Logo" />
+        </a>
+      </div>
+      <div id="menu-icon">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul>
+        
+        <div id = "links">
+        <li>
+          <a  href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="Solutions.html">Solutions</a>
+        </li>
+        <li>
+          <a class="active" href="Parts.html">Parts</a>
+        </li>
+      </div>
+      <li>
+          <a href="#" onclick='return logout()'>Logout</a>
+        </li>
+        <li >
+          <div id="user-icon">
+            <a  href="Account.html"><i class="glyphicon glyphicon-user"></i></a>
+          </div>
+        </li>
+        <li >
+          <div id="search-icon">
+            <i class="fas fa-search"></i>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <div id="searchbox">
+      <input type="text" placeholder="Search Here" />
+    </div>
+
+    <div id="banner">
+        <div id="parts-container">
+          <div class="container-style">
+            <h1 class="form__title">SUCCESS</h1>
+
+            <h3 class="form__title">Thank You For Your Purchase!</h3>
+
+            <button  onclick = "return purchases()">See All Purchases</button>
+            
+           
+            </div>
+        </div>
+    </div>  
+
+    <footer>
+        <div id="left-footer">
+          <h3>Quick Links</h3>
+          <p>
+            <ul>
+              <li>
+                <a href="#">Home</a>
+              </li>
+              <li>
+                <a href="#">Solutions</a>
+              </li>
+              <li>
+                <a href="#">Parts</a>
+              </li>
+              <li>
+                <a href="#">Contact</a>
+              </li>
+              <li>
+                <a href="#">About</a>
+              </li>
+            </ul>
+          </p>
+        </div>
+      </footer>
+   
+
+    <script>
+      if(localStorage.getItem('boolLogin') == "false"){
+        document.location.href = './login.html';
+      }
+      function logout(){
+        localStorage.setItem('boolLogin', "false");
+        document.location.href = './login.html';
+      }
+      Storage.prototype.setObj = function(key, obj) {
+    return this.setItem(key, JSON.stringify(obj))
+}
+Storage.prototype.getObj = function(key) {
+    return JSON.parse(this.getItem(key))
+}
+      function purchases(){
+        
+
+        let url = "../API/api/account/getInfo.php?un=" + localStorage.getItem('username') 
+
+        fetch(url)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function(obj){
+      localStorage.setObj('myPurchasesArray', obj.data);
+      document.location.href = './Purchases.html';
+      console.log(obj.data);
+    })
+    .catch(function (error) {
+      console.error(error);
+    });
+      }
+
+    </script>
+    <script src="main.js"></script>
+    
+  </body>
+</html>

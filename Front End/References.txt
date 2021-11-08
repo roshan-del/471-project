@@ -1,0 +1,58 @@
+*Images*
+
+DownArrow: https://www.google.com/search?q=down+arrow+black+png&sxsrf=ALeKk037TYNCbJ46uPA4ajM757z_ronf_g:1617865844118&source=lnms&tbm=isch&sa=X&ved=2ahUKEwja3br3i-7vAhWT9Z4KHRMaBAEQ_AUoAXoECAEQAw&biw=2560&bih=1241#imgrc=8qhDquZ4sVvnIM
+
+Engine: https://www.google.com/search?q=engine&tbm=isch&ved=2ahUKEwitjbX0uYnwAhWVqp4KHce6DUUQ2-cCegQIABAA&oq=engine&gs_lcp=CgNpbWcQAzIECCMQJzIHCAAQsQMQQzIECAAQQzIECAAQQzIHCAAQsQMQQzIECAAQQzIFCAAQsQMyBQgAELEDMgUIABCxAzICCAA6CAgAELEDEIMBUP6PAVi7lwFgk5gBaABwAHgAgAFEiAGCA5IBATaYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=igR9YK2gKpXV-gTH9baoBA&bih=937&biw=1920#imgrc=UyutpTpncmG3iM
+
+Transmission: https://resize.hswstatic.com/w_828/gif/transmission-new.jpg
+
+Chassis: https://www.google.com/search?q=chassis&tbm=isch&ved=2ahUKEwjQwa3tienvAhULiZ4KHZFsADQQ2-cCegQIABAA&oq=chassis&gs_lcp=CgNpbWcQAzIFCAAQsQMyAggAMgIIADICCAAyAggAMgIIADICCAAyAggAMgIIADICCAA6BAgjECc6BAgAEEM6CAgAELEDEIMBOgYIABAFEB46BggAEAoQGFDO_wNYxZoEYOSbBGgBcAB4AIABPYgBzwOSAQE4mAEAoAEBqgELZ3dzLXdpei1pbWfAAQE&sclient=img&ei=LwtsYJDuFYuS-gSR2YGgAw&bih=937&biw=1920#imgrc=7sDXMRbYw97t9M
+
+Solutions Pic: https://www.google.com/search?q=solution+manual+cars&tbm=isch&ved=2ahUKEwjDpI3-uYnwAhULm54KHSHlABEQ2-cCegQIABAA&oq=solution&gs_lcp=CgNpbWcQARgAMgQIIxAnMgQIIxAnMgcIABCxAxBDMgQIABBDMgIIADICCAAyAggAMgIIADICCAAyAggAOggIABCxAxCDAToFCAAQsQM6BggAEAUQHjoGCAAQCBAeOgcIIxDqAhAnOgQIABADULd8WJaVAWDenAFoCHAAeACAAUiIAfwHkgECMTaYAQCgAQGqAQtnd3Mtd2l6LWltZ7ABCsABAQ&sclient=img&ei=nwR9YINZi7b6BKHKg4gB&bih=937&biw=1920#imgrc=mJY7_72nm2OErM
+
+Car repair: https://www.google.com/search?q=car+repair&tbm=isch&ved=2ahUKEwijoIeIuonwAhUQjp4KHd4QDFkQ2-cCegQIABAA&oq=car+repair&gs_lcp=CgNpbWcQAzIECAAQQzICCAAyAggAMgIIADICCAAyAggAMgIIADICCAAyAggAMgIIADoECCMQJzoICAAQsQMQgwE6BQgAELEDOgcIABCxAxBDOgoIABCxAxCDARBDUJqfBFjwqARgwKkEaABwAHgAgAFBiAHYBJIBAjEwmAEAoAEBqgELZ3dzLXdpei1pbWfAAQE&sclient=img&ei=swR9YOP6NZCc-gTeobDIBQ&bih=937&biw=1920#imgrc=m0CRaJ4xfx7qBM
+
+Sports cars: https://www.google.com/search?q=sports+cars&tbm=isch&ved=2ahUKEwiUv6iquonwAhV0PH0KHajjBngQ2-cCegQIABAA&oq=sports+cars&gs_lcp=CgNpbWcQAzICCAAyAggAMgIIADICCAAyAggAMgIIADICCAAyAggAMgIIADICCAA6BAgjECc6BAgAEEM6BAgAEAM6BQgAELEDOggIABCxAxCDAVCP-AJYjZEDYN2RA2gDcAB4AIABVIgB9gaSAQIxNJgBAKABAaoBC2d3cy13aXotaW1nwAEB&sclient=img&ei=-wR9YNTVLPT49AOox5vABw&bih=937&biw=1920#imgrc=notLSJN3yv-NSM
+
+Creating logo: https://looka.com/logo-maker/
+
+
+
+
+
+*Website Code*
+
+Nav Bar and front page reference to https://github.com/Godsont/Responsive-Website-Design , https://www.youtube.com/playlist?list=PL0-e1OMq5RP4LVmPKRljF5vAU3-Jx3yWQ
+
+Login/Register page: https://www.youtube.com/watch?v=3GsKEtBcGTk
+
+Parsing JSON Object: https://www.youtube.com/watch?v=LEBho3PUV3s
+
+Image Slider: https://drive.google.com/file/d/1P_e2AlKIo61OQsWROMCzIG5x8QinA-Oj/view , https://www.youtube.com/watch?v=7IBd7vI-jxY
+
+Styling selection form: https://github.com/Godsont/Custom-Select-Box , https://www.youtube.com/watch?v=k4gzE80FKb0 , https://www.youtube.com/watch?v=KOus7o1W2R0
+
+Tables: https://github.com/divanov11/json-html-table/blob/master/jsontable.html , https://www.youtube.com/watch?v=Q9aYU1Ufkpk , https://github.com/divanov11/json-html-table/blob/master/jsontable.html
+
+Learning Fetch API: https://www.youtube.com/watch?v=cuEtnrL9-H0
+
+Confirm Password: https://www.codingnepalweb.com/2020/07/confirm-password-check-in-html-css.html
+
+Checking if div is empty: http://html-tuts.com/check-if-div-is-empty-html-element-has-children-tags/#:~:text=To%20check%20if%20div%20is,the%20length%20in%20tags%20also.
+
+Using split method: https://www.w3schools.com/jsref/jsref_split.asp#:~:text=The%20split()%20method%20is,not%20change%20the%20original%20string.
+
+Changing webpage javascript: https://www.w3schools.com/howto/howto_js_redirect_webpage.asp
+
+Using localStorage: https://stackoverflow.com/questions/3357553/how-do-i-store-an-array-in-localstorage#:~:text=Use%20localStorage.,work%20with%20the%20sessionStorage%20object.
+
+PopOut Form: https://www.w3schools.com/howto/howto_js_popup_form.asp
+
+Using .value function: https://stackoverflow.com/questions/15566999/how-to-show-form-input-fields-based-on-select-value
+
+Whether radio button is clicked: https://stackoverflow.com/questions/1423777/how-can-i-check-whether-a-radio-button-is-selected-with-javascript , 
+                                 https://stackoverflow.com/questions/21166860/check-a-radio-button-with-javascript , 
+                                 https://stackoverflow.com/questions/8922002/attach-event-listener-through-javascript-to-radio-button
+
+Bootstrap colors: https://getbootstrap.com/docs/4.0/utilities/colors/
+

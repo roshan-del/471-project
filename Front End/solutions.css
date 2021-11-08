@@ -1,0 +1,471 @@
+.container-selector {
+  padding: 32px;
+}
+
+.select-box {
+  display: flex;
+  width: 400px;
+  flex-direction: column;
+}
+
+.select-box .options-container {
+  background: gold;
+  color: black;
+  border: 3px solid black;
+  max-height: 0;
+  width: 100%;
+  opacity: 0;
+  transition: all 1s;
+  border-radius: 8px;
+  overflow: hidden;
+
+  order: 1;
+}
+
+.selected {
+  background: gold;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  color: black;
+  position: relative;
+  border: 3px solid black;
+  order: 0;
+  font-weight: bold;
+}
+
+.selected::after {
+  content: "";
+  background: url("img/arrow-down.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  color: black;
+  position: absolute;
+  height: 100%;
+  width: 20px;
+  right: 10px;
+  top: 20px;
+  transition: all 0.8s;
+}
+
+.select-box .options-container.active {
+  max-height: 240px;
+  opacity: 1;
+  overflow-y: scroll;
+}
+
+.select-box .options-container.active + .selected::after {
+  transform: rotateX(180deg);
+  top: -20px;
+}
+
+.select-box .options-container::-webkit-scrollbar {
+  width: 8px;
+  background: black;
+  color: black;
+  border-radius: 0 8px 8px 0;
+}
+
+.select-box .options-container::-webkit-scrollbar-thumb {
+  background: black;
+  color: black;
+  border-radius: 0 8px 8px 0;
+}
+
+.select-box .option,
+.selected {
+  /* padding: 12px 24px; */
+  cursor: pointer;
+}
+
+.select-box .option:hover {
+  background: yellow;
+}
+
+.select-box label {
+  cursor: pointer;
+  display: block;
+  padding: 12px 24px;
+}
+
+.select-box .option .radio {
+  display: none;
+}
+
+.select-box-make {
+  display: flex;
+  width: 400px;
+  flex-direction: column;
+}
+
+.select-box-make .options-container-make {
+  background: gold;
+  color: black;
+  border: 3px solid black;
+  max-height: 0;
+  width: 100%;
+  opacity: 0;
+  transition: all 1s;
+  border-radius: 8px;
+  overflow: hidden;
+
+  order: 1;
+}
+
+.selected-make {
+  background: gold;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  color: black;
+  position: relative;
+  border: 3px solid black;
+  order: 0;
+  font-weight: bold;
+}
+
+.selected-make::after {
+  content: "";
+  background: url("img/arrow-down.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  color: black;
+  position: absolute;
+  height: 100%;
+  width: 20px;
+  right: 10px;
+  top: 20px;
+  transition: all 0.8s;
+}
+
+.select-box-make .options-container-make.active {
+  max-height: 240px;
+  opacity: 1;
+  overflow-y: scroll;
+}
+
+.select-box-make .options-container-make.active + .selected-make::after {
+  transform: rotateX(180deg);
+  top: -20px;
+}
+
+.select-box-make .options-container-make::-webkit-scrollbar {
+  width: 8px;
+  background: black;
+  color: black;
+  border-radius: 0 8px 8px 0;
+}
+
+.select-box-make .options-container-make::-webkit-scrollbar-thumb {
+  background: black;
+  color: black;
+  border-radius: 0 8px 8px 0;
+}
+
+.select-box-make .option-make,
+.selected-make {
+  /* padding: 12px 24px; */
+  cursor: pointer;
+}
+
+.select-box-make .option-make:hover {
+  background: yellow;
+}
+
+.select-box-make label {
+  cursor: pointer;
+  display: block;
+  padding: 12px 24px;
+}
+
+.select-box-make .option-make .radio {
+  display: none;
+}
+
+.select-box-model {
+  display: flex;
+  width: 400px;
+  flex-direction: column;
+}
+
+.select-box-model .options-container-model {
+  background: gold;
+  color: black;
+  border: 3px solid black;
+  max-height: 0;
+  width: 100%;
+  opacity: 0;
+  transition: all 1s;
+  border-radius: 8px;
+  overflow: hidden;
+
+  order: 1;
+}
+
+.selected-model {
+  background: gold;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  color: black;
+  position: relative;
+  border: 3px solid black;
+  order: 0;
+  font-weight: bold;
+}
+
+.selected-model::after {
+  content: "";
+  background: url("img/arrow-down.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  color: black;
+  position: absolute;
+  height: 100%;
+  width: 20px;
+  right: 10px;
+  top: 20px;
+  transition: all 0.8s;
+}
+
+.select-box-model .options-container-model.active {
+  max-height: 240px;
+  opacity: 1;
+  overflow-y: scroll;
+}
+
+.select-box-model .options-container-model.active + .selected-model::after {
+  transform: rotateX(180deg);
+  top: -20px;
+}
+
+.select-box-model .options-container-model::-webkit-scrollbar {
+  width: 8px;
+  background: black;
+  color: black;
+  border-radius: 0 8px 8px 0;
+}
+
+.select-box-model .options-container-model::-webkit-scrollbar-thumb {
+  background: black;
+  color: black;
+  border-radius: 0 8px 8px 0;
+}
+
+.select-box-model .option-model,
+.selected-model {
+  /* padding: 12px 24px; */
+  cursor: pointer;
+}
+
+.select-box-model .option-model:hover {
+  background: yellow;
+}
+
+.select-box-model label {
+  cursor: pointer;
+  display: block;
+  padding: 12px 24px;
+}
+
+.select-box-model .option-model .radio {
+  display: none;
+}
+
+.select-box-year {
+  display: flex;
+  width: 400px;
+  flex-direction: column;
+}
+
+.select-box-year .options-container-year {
+  background: gold;
+  color: black;
+  border: 3px solid black;
+  max-height: 0;
+  width: 100%;
+  opacity: 0;
+  transition: all 1s;
+  border-radius: 8px;
+  overflow: hidden;
+
+  order: 1;
+}
+
+.selected-year {
+  background: gold;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  color: black;
+  position: relative;
+  border: 3px solid black;
+  order: 0;
+  font-weight: bold;
+}
+
+.selected-year::after {
+  content: "";
+  background: url("img/arrow-down.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  color: black;
+  position: absolute;
+  height: 100%;
+  width: 20px;
+  right: 10px;
+  top: 20px;
+  transition: all 0.8s;
+}
+
+.select-box-year .options-container-year.active {
+  max-height: 240px;
+  opacity: 1;
+  overflow-y: scroll;
+}
+
+.select-box-year .options-container-year.active + .selected-year::after {
+  transform: rotateX(180deg);
+  top: -20px;
+}
+
+.select-box-year .options-container-year::-webkit-scrollbar {
+  width: 8px;
+  background: black;
+  color: black;
+  border-radius: 0 8px 8px 0;
+}
+
+.select-box-year .options-container-year::-webkit-scrollbar-thumb {
+  background: black;
+  color: black;
+  border-radius: 0 8px 8px 0;
+}
+
+.select-box-year .option-year,
+.selected-year {
+  /* padding: 12px 24px; */
+  cursor: pointer;
+}
+
+.select-box-year .option-year:hover {
+  background: yellow;
+}
+
+.select-box-year label {
+  cursor: pointer;
+  display: block;
+  padding: 12px 24px;
+}
+
+.select-box-year .option-year .radio {
+  display: none;
+}
+
+.select-box-issue-name {
+  display: flex;
+  width: 400px;
+  flex-direction: column;
+}
+
+.select-box-issue-name .options-container-issue-name {
+  background: gold;
+  color: black;
+  border: 3px solid black;
+  max-height: 0;
+  width: 100%;
+  opacity: 0;
+  transition: all 1s;
+  border-radius: 8px;
+  overflow: hidden;
+
+  order: 1;
+}
+
+.selected-issue-name {
+  background: gold;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  color: black;
+  position: relative;
+  border: 3px solid black;
+  order: 0;
+  font-weight: bold;
+}
+
+.selected-issue-name::after {
+  content: "";
+  background: url("img/arrow-down.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  color: black;
+  position: absolute;
+  height: 100%;
+  width: 20px;
+  right: 10px;
+  top: 20px;
+  transition: all 0.8s;
+}
+
+.select-box-issue-name .options-container-issue-name.active {
+  max-height: 240px;
+  opacity: 1;
+  overflow-y: scroll;
+}
+
+.select-box-issue-name
+  .options-container-issue-name.active
+  + .selected-issue-name::after {
+  transform: rotateX(180deg);
+  top: -20px;
+}
+
+.select-box-issue-name .options-container-issue-name::-webkit-scrollbar {
+  width: 8px;
+  background: black;
+  color: black;
+  border-radius: 0 8px 8px 0;
+}
+
+.select-box-issue-name .options-container-issue-name::-webkit-scrollbar-thumb {
+  background: black;
+  color: black;
+  border-radius: 0 8px 8px 0;
+}
+
+.select-box-issue-name .option-issue-name,
+.selected-issue-name {
+  /* padding: 12px 24px; */
+  cursor: pointer;
+}
+
+.select-box-issue-name .option-issue-name:hover {
+  background: yellow;
+}
+
+.select-box-issue-name label {
+  cursor: pointer;
+  display: block;
+  padding: 12px 24px;
+}
+
+.select-box-issue-name .option-issue-name .radio {
+  display: none;
+}
+
+.form--hidden {
+  display: none;
+}
+
+.selected {
+  padding: 12px 24px;
+}
+.selected-make {
+  padding: 12px 24px;
+}
+.selected-model {
+  padding: 12px 24px;
+}
+.selected-year {
+  padding: 12px 24px;
+}
+
+.selected-issue-name {
+  padding: 12px 24px;
+}

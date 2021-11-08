@@ -1,0 +1,5 @@
+For SQL: 
+
+https://www.w3schools.com/sql/sql_autoincrement.asp
+
+https://www.youtube.com/watch?v=uKwR9fWsZJ4

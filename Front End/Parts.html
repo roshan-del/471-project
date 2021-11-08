@@ -1,0 +1,551 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Roboto+Slab"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href ="selector.css" />
+
+    <title>Parts</title>
+  </head>
+  <body>
+    <div id="slideout-menu">
+      <ul>
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="Solutions.html">Solutions</a>
+        </li>
+        <li>
+          <a href="Parts.html">Parts</a>
+        </li>
+        <li>
+          <a href="Login.html">Login</a>
+        </li>
+        <li>
+          <input type="text" placeholder="Search Here" />
+        </li>
+      </ul>
+    </div>
+
+    <nav>
+      <div id="logo-img">
+        <a href="index.html">
+          <img src="img/Car Error System Logo.png" alt="CES Logo" />
+        </a>
+      </div>
+      <div id="menu-icon">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul>
+        
+        <div id = "links">
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="Solutions.html">Solutions</a>
+        </li>
+        <li>
+          <a class="active" href="Parts.html">Parts</a>
+        </li>
+      </div>
+      <li>
+          <a href="#" onclick='return logout()'>Logout</a>
+        </li>
+        <li >
+          <div id="user-icon">
+            <a href="Account.html"><i class="glyphicon glyphicon-user"></i></a>
+          </div>
+        </li>
+        <li >
+          <div id="search-icon">
+            <i class="fas fa-search"></i>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <div id="searchbox">
+      <input type="text" placeholder="Search Here" />
+    </div>
+
+    <div id="banner">
+      <div id="parts-container">
+        <div class="container-style">
+        <h1 class="form__title">Part Search</h1>
+            <div class="container-selector">
+
+              
+
+      <form id = "partForm">
+    <div class="select-box-maker">
+    <div id= "makeOp" class="options-container-maker">
+      <!-- <div class="option-maker">
+        <input
+          type="radio"
+          class="radio"
+          id="Honda"
+          value="Honda"
+          name="maker"
+        />
+        <label for="Honda">Honda</label>
+      </div>
+    
+      <div class="option-maker">
+        <input type="radio" class="radio" id="Ford" value="Ford" name="maker" />
+        <label for="Ford">Ford</label>
+      </div>
+    
+      <div class="option-maker">
+        <input type="radio" class="radio" id="Mazda" value="Mazda" name="maker" />
+        <label for="Mazda">Mazda</label>
+      </div>
+    
+      <div class="option-maker">
+        <input type="radio" class="radio" id="Dodge" value="Dodge" name="maker" />
+        <label for="Dodge">Dodge</label>
+      </div> -->
+    </div>
+    
+    <div class="selected-maker">
+      Select Make
+    </div>
+  </div>
+
+              <div class="select-box-model">
+                <div id="modelOp" class="options-container-model">
+                  <!-- <div class="option-model">
+                    <input
+                      type="radio"
+                      class="radio"
+                      id="Challenger"
+                      value= "Challenger"
+                      name="model"
+                    />
+                    <label for="Challenger">Challenger</label>
+                  </div>
+                
+                  <div class="option-model">
+                    <input type="radio" class="radio" id="Escape"   value= "Escape" name="model" />
+                    <label for="Escape">Escape</label>
+                  </div>
+                
+                  <div class="option-model">
+                    <input type="radio" class="radio" id="Focus" value= "Focus" name="model" />
+                    <label for="Focus">Focus</label>
+                  </div>
+                
+                  <div class="option-model">
+                    <input type="radio" class="radio" id="Accord" value= "Accord" name="model" />
+                    <label for="Accord">Accord</label>
+                  </div>
+                  
+
+                  <div class="option-model">
+                    <input type="radio" class="radio" id="Civic" value= "Civic" name="model" />
+                    <label for="Civic">Civic</label>
+                  </div>
+
+                  <div class="option-model">
+                    <input type="radio" class="radio" id="Prelude" value= "Prelude" name="model" />
+                    <label for="Prelude">Prelude</label>
+                  </div>
+
+                  <div class="option-model">
+                    <input type="radio" class="radio" id="Mazda3" value= "Mazda3" name="model" />
+                    <label for="Mazda3">Mazda3</label>
+                  </div> -->
+                </div>
+                
+                <div class="selected-model ">
+                  Select Model
+                </div>
+                </div>
+
+                <div class="select-box-year">
+                  <div id = "yearOp" class="options-container-year">
+                    <!-- <div class="option-year">
+                      <input
+                        type="radio"
+                        class="radio"
+                        id="1992"
+                        value="1992"
+                        name="year"
+                      />
+                      <label for="1992">1992</label>
+                    </div>
+                  
+                    <div class="option-year">
+                      <input type="radio" class="radio" id="2000" value="2000" name="year" />
+                      <label for="2000">2000</label>
+                    </div>
+                  
+                    <div class="option-year">
+                      <input type="radio" class="radio" id="2002" value="2002" name="year" />
+                      <label for="2002">2002</label>
+                    </div>
+                  
+                    <div class="option-year">
+                      <input type="radio" class="radio" id="2007" value="2007" name="year" />
+                      <label for="2007">2007</label>
+                    </div>
+                    <div class="option-year">
+                      <input type="radio" class="radio" id="2010" value="2010" name="year" />
+                      <label for="2010">2010</label>
+                    </div>
+                  
+                    <div class="option-year">
+                      <input type="radio" class="radio" id="2012" value="2012" name="year" />
+                      <label for="2012">2012</label>
+                    </div>
+                  
+                    <div class="option-year">
+                      <input type="radio" class="radio" id="2015" value="2015" name="year" />
+                      <label for="2015">2015</label>
+                    </div> -->
+
+
+                  </div>
+                  
+                  <div class="selected-year ">
+                    Select year
+                  </div>
+                </div>
+
+        
+                <button class="partSearch__button" type="submit">Continue</button>
+              </form>
+          </div>
+        </div>
+      </div>
+   </div>
+
+
+
+  
+      <footer>
+        
+        <div id="left-footer">
+          <h3>Quick Links</h3>
+          <p>
+            <ul>
+              <li>
+                <a href="#">Home</a>
+              </li>
+              <li>
+                <a href="#">Solutions</a>
+              </li>
+              <li>
+                <a href="#">Parts</a>
+              </li>
+              <li>
+                <a href="#">Contact</a>
+              </li>
+              <li>
+                <a href="#">About</a>
+              </li>
+            </ul>
+          </p>
+        </div>
+      </footer>
+    
+
+    <script src='jquery-3.6.0.min.js'></script>     
+
+    <script>
+Storage.prototype.setObj = function(key, obj) {
+    return this.setItem(key, JSON.stringify(obj))
+}
+Storage.prototype.getObj = function(key) {
+    return JSON.parse(this.getItem(key))
+}
+
+    var myBool = false; 
+    let url = "../API/api/car/getMakes.php"
+    fetch(url)
+    .then(function (response) {
+    return response.json();
+    })
+    .then(function(obj){
+    localStorage.setObj('myMakes', obj.data);    
+    console.log(obj.data);
+    })
+    .catch(function (error) {
+    console.error(error);
+    });
+
+    var myArray = JSON.parse(localStorage.getItem('myMakes'));
+
+    buildMakes(myArray);
+
+    function buildMakes(data){
+    console.log(myArray);
+    var table = document.getElementById('makeOp')
+    table.innerHTML = ''
+    for (var i = 0; i < data.length; i++){
+        var colname = `name-${i}`
+        var colage = `age-${i}`
+        var colbirth = `birth-${i}`
+
+
+        make = data[i].make;
+        model = data[i].model;
+        year = data[i].year;
+
+        if (data[i].guide == "NULL"){
+            data[i].guide = "none";
+        }
+        var row =
+                  `<div class="option-maker">
+                  <input type="radio" class="radio" id="${data[i].make}" value="${data[i].make}" name="maker" />
+                  <label for="${data[i].make}">${data[i].make}</label>
+                  </div>`
+        table.innerHTML += row
+    }
+
+}
+
+
+
+const partForm = document.getElementById("partForm");
+  let makeForm;
+  let modelForm;
+  let yearForm;
+
+  var make = document.forms["partForm"].elements["maker"];
+for(var i = 0, max = make.length; i < max; i++) {
+  make[i].onclick = function() {
+    makeForm = this.value; 
+    // alert(this.value);
+    getModel();    
+    }
+}
+
+function getModel(){
+let urlModel = "../API/api/car/getModels.php?make=" + makeForm;
+    fetch(urlModel)
+    .then(function (response) {
+    return response.json();
+    })
+    .then(function(obj){
+    
+    buildModels(obj.data);
+    console.log(obj.data);
+    })
+    .catch(function (error) {
+    console.error(error);
+    });
+
+
+}
+var myBool = false; 
+function buildModels(data){
+    console.log(data);
+    var table = document.getElementById('modelOp')
+    table.innerHTML = ''
+    for (var i = 0; i < data.length; i++){
+        var colname = `name-${i}`
+        var colage = `age-${i}`
+        var colbirth = `birth-${i}`
+
+
+        make = data[i].make;
+        model = data[i].model;
+        year = data[i].year;
+
+        if (data[i].guide == "NULL"){
+            data[i].guide = "none";
+        }
+
+    var input = document.createElement('input');
+    input.setAttribute("type", "radio");
+    input.setAttribute("class", "radio");
+    input.setAttribute("id", data[i].model);
+    input.setAttribute("value", data[i].model);
+    input.setAttribute("name", "model");
+
+      var label = document.createElement('label');
+      var t = document.createTextNode(data[i].model);
+      label.setAttribute("for", data[i].model);
+      label.appendChild(t);
+
+    
+    var element = document.createElement("div");
+    element.className = "option-model";
+    element.appendChild(input); 
+    element.appendChild(label);
+    document.getElementById('modelOp').appendChild(element);
+    }
+    myBool = true; 
+    modelEvent();
+}
+    
+//Model
+function modelEvent(){
+if (myBool) {
+const selectedModel = document.querySelector(".selected-model");
+const optionsContainerModel = document.querySelector(
+  ".options-container-model"
+);
+
+const optionsListModel = document.querySelectorAll(".option-model");
+
+selectedModel.addEventListener("click", () => {
+  optionsContainerModel.classList.toggle("active");
+});
+
+
+  optionsListModel.forEach((o) => {
+    o.addEventListener("click", () => {
+      selectedModel.innerHTML = o.querySelector("label").innerHTML;
+      optionsContainerModel.classList.remove("active");
+      // alert(o.querySelector("label").innerHTML);
+      modelForm = o.querySelector("label").innerHTML;
+      getYear();
+    });
+  });
+}
+}
+
+function getYear() {
+  let urlYear = "../API/api/car/getYears.php?make=" + makeForm + "&model=" + modelForm;
+  fetch(urlYear)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (obj) {
+      buildYears(obj.data);
+      console.log(obj.data);
+    })
+    .catch(function (error) {
+      console.error(error);
+    });
+
+}
+var myBool = false;
+function buildYears(data) {
+  console.log(data);
+  var table = document.getElementById("yearOp");
+  table.innerHTML = "";
+  for (var i = 0; i < data.length; i++) {
+    var colname = `name-${i}`;
+    var colage = `age-${i}`;
+    var colbirth = `birth-${i}`;
+
+    make = data[i].make;
+    year = data[i].year;
+    year = data[i].year;
+
+    if (data[i].guide == "NULL") {
+      data[i].guide = "none";
+    }
+
+
+    var input = document.createElement("input");
+    input.setAttribute("type", "radio");
+    input.setAttribute("class", "radio");
+    input.setAttribute("id", data[i].year);
+    input.setAttribute("value", data[i].year);
+    input.setAttribute("name", "year");
+
+    var label = document.createElement("label");
+    var t = document.createTextNode(data[i].year);
+    label.setAttribute("for", data[i].year);
+    label.appendChild(t);
+
+    var element = document.createElement("div");
+    element.className = "option-year";
+    element.appendChild(input);
+    element.appendChild(label);
+    document.getElementById("yearOp").appendChild(element);
+  }
+  myBool = true;
+  yearEvent();
+}
+
+//Year
+function yearEvent() {
+  if (myBool) {
+    const selectedYear = document.querySelector(".selected-year");
+    const optionsContainerYear = document.querySelector(
+      ".options-container-year"
+    );
+
+    const optionsListYear = document.querySelectorAll(".option-year");
+
+    selectedYear.addEventListener("click", () => {
+      optionsContainerYear.classList.toggle("active");
+    });
+
+    optionsListYear.forEach((o) => {
+      o.addEventListener("click", () => {
+        selectedYear.innerHTML = o.querySelector("label").innerHTML;
+        optionsContainerYear.classList.remove("active");
+        // alert(o.querySelector("label").innerHTML);
+        yearForm = o.querySelector("label").innerHTML;
+      });
+    });
+  }
+}
+
+
+partForm.addEventListener("submit", (e) => {
+  
+  e.preventDefault();
+
+  console.log(makeForm);
+  console.log(modelForm);
+  console.log(yearForm);
+
+  let url = "../API/api/part/getAll.php?make=" + makeForm + "&model=" + modelForm + "&year=" + yearForm;
+  let urlHome = "/index.html";
+  var textResponse;
+  
+
+  var myArray = [];
+  fetch(url)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function(obj){
+      localStorage.setObj('myPartsArray', obj.data);
+      document.location.href = './CarParts.html';
+      console.log(obj.data);
+    })
+    .catch(function (error) {
+      console.error(error);
+    });
+});
+
+
+    </script>
+    <script>
+      if(localStorage.getItem('boolLogin') == "false"){
+        document.location.href = './login.html';
+      }
+      function logout(){
+        localStorage.setItem('boolLogin', "false");
+        document.location.href ='./login.html';
+      }
+
+    </script>
+    <script src="main.js"></script>
+    <script src="selector.js"></script>
+  </body>
+</html>

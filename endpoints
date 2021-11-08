@@ -1,0 +1,445 @@
+Endpoint 1: 
+Description: Gets the main page
+URL: localhost/main.php 
+Method: GET
+Input: 
+Output: [{
+
+
+}]
+
+Endpoint 2: 
+Description: Gets the login page
+URL: localhost/login.php
+Method: GET
+Input: 
+Output: [{
+
+
+}]
+
+Endpoint 3: 
+Description: Gets the register page 
+URL: localhost/register.php
+Method: GET
+Input: 
+Output: [{
+
+
+}]
+
+Endpoint 4: 
+Description: Adds data to the accounts table
+URL: localhost/register/accounts.php
+Method: POST
+Input: Name
+Output: [{
+"AccountID": int
+
+}]
+
+Endpoint 5: 
+Description: Edits data in the accounts table
+URL: localhost/register/accounts.php
+Method: PUT
+Input: Name
+Output: [{
+"AccountID": int
+
+}]
+
+Endpoint 6: 
+Description: Deletes an account in accounts table
+URL: localhost/register/accounts.php
+Method: DELETE
+Input: Name
+Output: [{
+"AccountID": int
+
+}]
+
+Endpoint 7: 
+Description: Gets the parts page
+URL: localhost/parts.php
+Method: GET
+Input: PartName
+Output: [{
+"PartID": int
+
+}]
+
+Endpoint 8: 
+Description: Gets the solutions page
+URL: localhost/solutions.php
+Method: GET
+Input: IssueName
+Output: [{
+"GuideTitle": string
+
+}]
+
+Endpoint 9: 
+Description: Gets admin account from accounts
+URL: localhost/accounts/admin.php
+Method: GET
+Input: AdminID
+Output: [{
+"AccountID":int
+"Name" : string
+"Date of Creation": date
+
+}]
+
+Endpoint 10: 
+Description: Adds an admin account 
+URL: localhost/accounts/admin.php
+Method: POST
+Input: AdminID
+Output: [{
+"AccountID":int
+"Name" : string
+"Date of Creation": date
+
+}]
+
+
+Endpoint 11: 
+Description: Deletes an admin account 
+URL: localhost/accounts/admin.php
+Method: DELETE
+Input: AdminID
+Output: [{
+"AccountID":int
+"Name" : string
+"Date of Creation": date
+
+}]
+
+Endpoint 12: 
+Description: Edits an admin account 
+URL: localhost/accounts/admin.php
+Method: PUT
+Input: AdminID
+Output: [{
+"AccountID":int
+"Name" : string
+"Date of Creation": date
+
+}]
+
+Endpoint 13: 
+Description: Views the parts for specific login 
+URL: localhost/login/viewparts.php
+Method: GET
+Input: AdminID
+Output: [{
+"AccountID":int
+"Name" : string
+"Date of Creation": date
+
+}]
+
+Endpoint 14: 
+Description: Gets the solutions from the issues
+URL: localhost/solutions/issues.php
+Method: GET
+Input: IssueName
+Output: [{
+"GuideTitle": string
+
+}]
+
+Endpoint 15: 
+Description: Gets the solutions for cars
+URL: localhost/solutions/cars.php
+Method: GET
+Input: PartID
+Output: [{
+"GuideTitle": string
+
+}]
+
+Endpoint 16: 
+Description: Gets list of accounts in database
+URL: localhost/accounts.php
+Method: GET
+Input: Name
+Output: [{
+"AccountID": int
+
+}]
+
+Endpoint 17: 
+Description: Adds a part to parts 
+URL: localhost/parts.php
+Method: POST
+Input: PartName
+Output: [{
+"PartID": int
+"Price": double
+"Rating": int
+"Title": String
+
+}]
+
+Endpoint 18: 
+Description: Deletes a part in parts 
+URL: localhost/parts.php
+Method: DELETE
+Input: PartName
+Output: [{
+"PartID": int
+"Price": double
+"Rating": int
+"Title": String
+
+}]
+
+Endpoint 19: 
+Description: Updates a part in parts 
+URL: localhost/parts.php
+Method: PUT
+Input: PartName
+Output: [{
+"PartID": int
+"Price": double
+"Rating": int
+"Title": String
+
+}]
+
+Endpoint 20: 
+Description: Gets the Guide for a certain issue
+URL: localhost/solutions/issues/guides.php
+Method: GET
+Input: IssueName
+Output: [{
+"GuideTitle": String
+
+}]
+
+Endpoint 21: 
+Description: Gets the verification for the current guide
+URL: localhost/solutions/issues/guides/guideVerification.php
+Method: GET
+Input: GuideTitle
+Output: [{
+"ProfessionalID" : int
+"AdminID": int
+
+}]
+
+
+Endpoint 22: 
+Description: Gets the user info of login
+URL: localhost/login/user.php
+Method: GET
+Input: AccountID
+Output: [{
+"AccountID": int
+"Name": string
+"AccountType": String
+
+}]
+
+Endpoint 23: 
+Description: Gets the user info of register
+URL: localhost/login/user.php
+Method: GET
+Input: AccountID
+Output: [{
+"AccountID": int
+"Name": string
+"AccountType": String
+
+}]
+
+Endpoint 24: 
+Description: Edits the user info of login
+URL: localhost/login/user.php
+Method: PUT
+Input: AccountID
+Output: [{
+"AccountID": int
+"Name": string
+"AccountType": String
+
+}]
+
+Endpoint 25: 
+Description: Adds to user info of login
+URL: localhost/login/user.php
+Method: POST
+Input: AccountID
+Output: [{
+"AccountID": int
+"Name": string
+"AccountType": String
+
+}]
+
+Endpoint 26: 
+Description: Removes the user info of login
+URL: localhost/login/user.php
+Method: DELETE
+Input: AccountID
+Output: [{
+"AccountID": int
+"Name": string
+"AccountType": String
+
+
+
+}]
+
+Endpoint 27: 
+Description: Adds an issue to issues database
+URL: localhost/solutions/issues.php
+Method: POST
+Input: IssueName
+Output: [{
+"IssueName": String
+"Commonness": int
+"Severity": int
+"Description": int
+"Difficulty": int
+"PartID": int
+
+}]
+
+Endpoint 28: 
+Description: Deletes an issue in the issues database
+URL: localhost/solutions/issues.php
+Method: DELETE
+Input: IssueName
+Output: [{
+"IssueName": String
+"Commonness": int
+"Severity": int
+"Description": int
+"Difficulty": int
+"PartID": int
+
+}]
+
+Endpoint 29: 
+Description: Edits an issue in the issues database
+URL: localhost/solutions/issues.php
+Method: PUT
+Input: IssueName
+Output: [{
+"IssueName": String
+"Commonness": int
+"Severity": int
+"Description": int
+"Difficulty": int
+"PartID": int
+
+}]
+
+Endpoint 30: 
+Description: Adds a car to car database
+URL: localhost/solutions/cars.php
+Method: POST
+Input: Make, Model, Year
+Output: [{
+"Make": String
+"Model": String
+"Year": int
+"DriveTrain": String
+"Chassis": String
+"Transmission": String
+"Engine": String
+
+}]
+
+Endpoint 31: 
+Description: Deletes a car in the car database
+URL: localhost/solutions/cars.php
+Method: DELETE
+Input: Make, Model, Year
+Output: [{
+"Make": String
+"Model": String
+"Year": int
+"DriveTrain": String
+"Chassis": String
+"Transmission": String
+"Engine": String
+
+}]
+
+
+Endpoint 32: 
+Description: Edits a car in the car database
+URL: localhost/solutions/cars.php
+Method: PUT
+Input: Make, Model, Year
+Output: [{
+"Make": String
+"Model": String
+"Year": int
+"DriveTrain": String
+"Chassis": String
+"Transmission": String
+"Engine": String
+
+}]
+
+
+
+
+Endpoint 33: 
+Description: Adds a Guide for a certain issue
+URL: localhost/solutions/issues/guides.php
+Method: POST
+Input: IssueName
+Output: [{
+"Avg.Rate": double
+"GuideTitle": String
+"Article": String
+"Video": String
+"ProfessionalID": int
+"AdminID": int
+"IssueName": String
+
+
+}]
+
+Endpoint 34: 
+Description: Deletes a Guide for a certain issue
+URL: localhost/solutions/issues/guides.php
+Method: DELETE
+Input: IssueName
+Output: [{
+"Avg.Rate": double
+"GuideTitle": String
+"Article": String
+"Video": String
+"ProfessionalID": int
+"AdminID": int
+"IssueName": String
+
+}]
+
+
+
+Endpoint 35: 
+Description: Edits a Guide for a certain issue
+URL: localhost/solutions/issues/guides.php
+Method: PUT
+Input: IssueName
+Output: [{
+"Avg.Rate": double
+"GuideTitle": String
+"Article": String
+"Video": String
+"ProfessionalID": int
+"AdminID": int
+"IssueName": String
+
+}]
+
+
+
+

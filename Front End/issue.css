@@ -1,0 +1,631 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  font-family: "Exo 2", sans-serif;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+
+h1 {
+  padding: 10px;
+  background: rgba(255, 255, 0, 0.2);
+  border-radius: 8px;
+  margin: 0;
+  font-size: 70px;
+  font-family: "Roboto Slab";
+}
+
+p {
+  line-height: 2;
+}
+
+main {
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Inputs */
+
+input,
+textarea {
+  height: 32px;
+  padding: 0 16px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 24px;
+  border: none;
+  box-shadow: inset 6px 2px 20px -3px rgba(0, 0, 0, 0.3);
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+/*Banner*/
+#banner {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.7) url("img/carRepair.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-blend-mode: overlay;
+  color: black;
+  box-sizing: border-box;
+  /* overflow-y: auto; */
+}
+
+#banner h3 {
+  background: white;
+  border-radius: 9px;
+  padding: 0 28px;
+  font-size: 22px;
+}
+
+#banner-home {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.7) url("carRepair.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-blend-mode: overlay;
+  color: black;
+}
+
+/*Search Box*/
+
+#searchbox {
+  position: fixed;
+  right: 0;
+  flex: 2 1 auto;
+  top: 22px;
+  width: 500px;
+  pointer-events: none;
+  z-index: 50;
+  transition: 0.4s;
+}
+
+#searchbox input {
+  height: 42px;
+  width: 100%;
+}
+
+/* Navigation */
+
+nav {
+  height: 72px;
+  background: gold;
+  width: 100%;
+  margin: 0;
+  position: fixed;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  padding: 0 16px 0 0;
+  box-sizing: border-box;
+  z-index: 100;
+  flex: 2 1 auto;
+}
+
+nav a {
+  padding: 0 32px;
+  color: black;
+  transition: 0.2s;
+}
+
+nav a:hover {
+  text-decoration: none;
+  color: blueviolet;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+}
+
+.active {
+  color: orchid;
+}
+
+#links {
+  display: flex;
+  justify-content: center;
+  /* align-items: left; */
+  padding-right: 200px;
+  padding-left: 200px;
+}
+
+#logo-img {
+  display: flex;
+  height: 100%;
+  background: orange;
+  border: 2px solid red;
+  border-radius: 5px;
+  padding: 0 30px;
+  align-items: center;
+  color: black;
+  transition: 0.2s;
+}
+
+#logo-img img {
+  height: 90px;
+}
+
+#logo-img:hover {
+  background: khaki;
+}
+
+#menu-icon {
+  height: 100%;
+  font-size: 30px;
+  padding: 0 6px;
+  color: black;
+  display: none;
+  align-items: center;
+}
+
+/* Account Icon */
+
+#user-icon {
+  color: black;
+  padding: 0 10px;
+  cursor: pointer;
+  transition: 0.2s;
+  height: 36px;
+  display: flex;
+  /* position: fixed;
+  top: 15px;
+  right: 0; */
+}
+
+#user-icon:hover {
+  color: blueviolet;
+}
+
+/* Search */
+
+#search-icon {
+  color: black;
+  padding: 0px 10px;
+  cursor: pointer;
+  transition: 0.2s;
+  display: flex;
+  /* position: fixed;
+  top: 10px;
+  right: 0; */
+}
+
+#search-icon:hover {
+  color: blueviolet;
+}
+
+/* Slideout Menu */
+
+#slideout-menu {
+  display: none;
+  background: orange;
+  z-index: 100;
+  position: fixed;
+  transition: 0.4s;
+  margin-top: 150px;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#slideout-menu ul {
+  list-style: none;
+  padding: 0 36px;
+}
+
+#slideout-menu li {
+  padding: 10px;
+}
+
+#slideout-menu a {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 24px;
+  color: black;
+}
+
+#slideout-menu input {
+  width: 85%;
+  padding: 8px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 24px;
+  text-align: center;
+}
+
+section {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.section-heading {
+  font-size: 36px;
+  font-family: "Roboto Condensed", sans-serif;
+  border-left: 5px solid black;
+  border-right: 5px solid black;
+  transition: all 0.2s;
+  display: inline-block;
+  padding: 8px 30px;
+  color: black;
+}
+
+.section-heading:hover {
+  padding: 8px 50px;
+  background: forestgreen;
+}
+
+/* Section Source */
+
+#section-solutions p {
+  padding: 8px;
+  text-align: center;
+}
+
+#section-solutions a {
+  margin: 8px;
+  text-align: center;
+}
+
+/* Card */
+
+.card-image {
+  transition: 0.2s;
+}
+
+.card-image:hover {
+  box-shadow: 0 14px 2px -8px #897;
+}
+
+.card .card-description {
+  padding: 0 10px;
+}
+
+/* Button Read More */
+
+.btn-readmore {
+  padding: 8px 24px;
+  color: black;
+  border: 3px solid black;
+  transition: 0.2s;
+  display: inline-block;
+  margin-bottom: 22px;
+  margin-left: 2px;
+  font-weight: bold;
+  cursor: pointer;
+  background: gold;
+}
+
+.btn-readmore:hover {
+  background: orangered;
+  text-decoration: none;
+  padding: 8px 40px 8px 40px;
+  color: white;
+  text-align: center;
+}
+
+/* Footer */
+
+footer {
+  background: black;
+  padding: 10px;
+  color: gold;
+  display: flex;
+  text-align: center;
+  bottom: 0;
+  /* position: relative; */
+  width: 100%;
+}
+
+footer a {
+  color: gold;
+}
+
+footer #left-footer {
+  flex: 1;
+  padding-left: 32px;
+}
+
+footer #left-footer ul {
+  padding: 0;
+  list-style: none;
+  line-height: 1.5;
+}
+
+/* Media Queries */
+@media (max-width: 900px) {
+  nav ul {
+    display: none;
+  }
+  #menu-icon {
+    display: flex;
+  }
+
+  #slideout-menu {
+    display: block;
+  }
+
+  #searchbox {
+    display: none;
+  }
+}
+
+@media (max-width: 719px) {
+  main {
+    width: 95%;
+  }
+
+  section {
+    flex-direction: column;
+  }
+
+  .card .card .card-image img {
+    width: 100%;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  footer #left-footer {
+    flex: 1;
+    border-right: 0;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  main {
+    width: 100%;
+  }
+  h1 {
+    font-size: 50px;
+  }
+
+  #banner h3 {
+    font-size: 22px;
+  }
+  .card {
+    text-align: center;
+  }
+
+  #logo-img {
+    padding: 0;
+  }
+}
+
+@media (min-width: 720px) {
+  main {
+    width: 95%;
+  }
+  .card {
+    width: 45%;
+  }
+  .card .card-image img {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  main {
+    width: 85%;
+  }
+}
+
+#container {
+  --color-primary: gold;
+  --color-primary-dark: yellow;
+  --color-secondary: #252c6a;
+  --color-error: #cc3333;
+  --color-success: #4bb544;
+  --border-radius: 4px;
+
+  margin: 0;
+  height: 120vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  background: rgba(0, 0, 0, 0.7) url(./img/carRepair.jpg);
+  background-blend-mode: overlay;
+  background-size: cover;
+}
+
+#parts-container {
+  --color-primary: gold;
+  --color-primary-dark: yellow;
+  --color-secondary: #252c6a;
+  --color-error: #cc3333;
+  --color-success: #4bb544;
+  --border-radius: 4px;
+
+  margin: 0;
+  height: 120vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  margin: 8px;
+  text-align: center;
+  overflow-y: auto;
+}
+
+#parts-container button {
+  position: relative;
+  top: 20px;
+  padding: 8px 24px;
+  color: black;
+  border: 3px solid black;
+  transition: 0.2s;
+  display: inline-block;
+  margin-bottom: 22px;
+  margin-left: 2px;
+  font-weight: bold;
+  cursor: pointer;
+  background: gold;
+}
+
+#parts-container button:hover {
+  background: orangered;
+  text-decoration: none;
+  padding: 8px 40px 8px 40px;
+  color: white;
+  text-align: center;
+}
+
+.container-style {
+  width: 1500px;
+  max-width: 1500px;
+  max-height: 750px;
+  margin: 1rem;
+  padding: 20px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+  border-radius: 25px;
+  border: var(--border-radius);
+  background: #ffffff;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.container-style,
+.form__input,
+.form__button {
+  font: 500 1rem "Roboto Condensed", sans-serif;
+  font-size: 22px;
+  text-transform: none;
+}
+
+.form--hidden {
+  display: none;
+}
+
+.form > *:first-child {
+  margin-top: 0;
+}
+
+.form > *:last-child {
+  margin-bottom: 0;
+}
+
+.form__title {
+  padding: 10px;
+  background: none;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 60px;
+  font-family: "Roboto Slab";
+}
+
+.form__message {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.form__message--success {
+  color: var(--color-success);
+}
+
+.form__message--error {
+  color: var(--color-error);
+}
+
+.form__input-group {
+  margin-bottom: 1rem;
+}
+
+.form__input {
+  display: block;
+  width: 100%;
+  height: 50px;
+  padding: 0.75rem;
+  box-sizing: border-box;
+  border-radius: var(--border-radius);
+  border: 2px solid black;
+  outline: none;
+  background: #eeeeee;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.form__input:focus {
+  border-color: var(--color-primary);
+  background: #ffffff;
+}
+
+.form__input--error {
+  color: var(--color-error);
+  border-color: var(--color-error);
+}
+
+.form__input-error-message {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: var(--color-error);
+}
+
+.form__button {
+  width: 100%;
+  padding: 1rem 2rem;
+  font-weight: bold;
+  font-size: 1.9rem;
+  color: black;
+  border: none;
+  border-radius: var(--border-radius);
+  outline: none;
+  cursor: pointer;
+  background: var(--color-primary);
+}
+
+.form__button:hover {
+  background: var(--color-primary-dark);
+}
+
+.form__button:active {
+  transform: scale(0.98);
+}
+
+.form__text {
+  text-align: center;
+}
+
+.form__link {
+  color: var(--color-secondary);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.form__link:hover {
+  text-decoration: underline;
+}

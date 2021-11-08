@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Roboto+Slab"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="issue.css" />
+    <link rel="stylesheet" href ="selector.css" />
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <script src='jquery-3.6.0.min.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+    th{ 
+        cursor: pointer;
+        color:black;
+            }
+    .guideButton{
+
+        color: black;
+        border: 3px solid black;
+        transition: 0.2s;
+        display: flex;
+        margin-bottom: 22px;
+        margin-left: 2px;
+        font-weight: bold;
+        cursor: pointer;
+        background: gold;
+    }
+    .guideButton:hover{
+        background: orangered;
+        text-decoration: none;
+        color: white;
+        text-align: center;
+    }
+
+    .flex-wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container2-style {
+  width: 500px;
+  /* max-width: 1500px; */
+  max-height: 1000px;
+  margin: 1rem;
+  padding: 20px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+  border-radius: 25px;
+  border: var(--border-radius);
+  background: #ffffff;
+  padding: 20px;
+  overflow-y: auto;
+}
+.container2-style
+ {
+  font: 500 1rem "Roboto Condensed", sans-serif;
+  font-size: 22px;
+  text-transform: none;
+}
+
+
+</style>
+
+
+    <title>Issue</title>
+  </head>
+  <body>
+    <div id="slideout-menu">
+      <ul>
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="Solutions.html">Solutions</a>
+        </li>
+        <li>
+          <a href="Parts.html">Parts</a>
+        </li>
+        <li>
+          <a href="Login.html">Login</a>
+        </li>
+        <li>
+          <input type="text" placeholder="Search Here" />
+        </li>
+      </ul>
+    </div>
+
+    <nav>
+      <div id="logo-img">
+        <a href="index.html">
+          <img src="img/Car Error System Logo.png" alt="CES Logo" />
+        </a>
+      </div>
+      <div id="menu-icon">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul>
+        
+        <div id = "links">
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <a  href="Solutions.html">Solutions</a>
+        </li>
+        <li>
+          <a href="Parts.html">Parts</a>
+        </li>
+      </div>
+      <li>
+          <a href="#" onclick='return logout()'>Logout</a>
+        </li>
+        <li >
+          <div id="user-icon">
+            <a class="active" href="Admin.html"><i class="glyphicon glyphicon-user"></i></a>
+          </div>
+        </li>
+        <li >
+          <div id="search-icon">
+            <i class="fas fa-search"></i>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <div id="searchbox">
+      <input type="text" placeholder="Search Here" />
+    </div>
+    
+    <div id="banner" >
+      <div id="parts-container" >
+        <div id="containerStyles" class="container-style">
+        <div id ="car-list">
+            <h1 class="form__title">Admin Cars</h1>
+
+            <table class="table table-striped">
+            <tr  class="bg-warning">
+            <th   data-colname="name" data-order="desc">Make </th>
+            <th   data-colname="name" data-order="desc">Model </th>
+            <th   data-colname="name" data-order="desc">Year </th>
+            <th  data-colname="age" data-order="desc"></th>
+
+            </tr>
+            <tbody id="myTable">
+
+            </tbody>
+            </table>
+            </table>
+            <button class="partSearch__button" onclick="showAdd()">Add a Car</button>
+            <br>
+            <button class="partSearch__button" onclick="myAdmin()">Admin Portal</button>
+            
+        </div>
+        <div id="add-car" class="form--hidden">
+
+        <h1 class="form__title">Add Car</h1>
+                
+                <div class="form__input-group">
+                <input type="text" class="form__input" autofocus placeholder="Make" name= "Make" id="make">
+                
+                </div>
+                <div class="form__input-group">
+                    <input type="text" class="form__input" autofocus placeholder="Model" name= "Model" id="model">
+                    
+                </div>
+                <div class="form__input-group">
+                    <input type="text" class="form__input" autofocus placeholder="Year" name= "Year" id="year">
+                </div>
+                <div class="form__input-group">
+                    <input type="text" class="form__input" autofocus placeholder="Drive Train" name= "Drive Train" id="driveTrain">
+                </div>
+                <div class="form__input-group">
+                    <input type="text" class="form__input" autofocus placeholder="Transmission" name= "Transmission" id="transmission">
+                </div>
+                <div class="form__input-group">
+                    <input type="text" class="form__input" autofocus placeholder="Engine" name= "Engine" id="engine">
+                </div>
+                <div class="form__input-group">
+                    <input type="text" class="form__input" autofocus placeholder="Chassis" name= "Chassis" id="chassis">
+                </div>
+               
+                <button class="partSearch__button" onclick="addCar()">Add Car</button>
+                <br>
+                <button class="partSearch__button" onclick="cancelCar()">Cancel</button>
+                </div>
+            <!-- <h1 class="form__title">Add Car</h1>
+           
+            <div class="form__input-group">
+                <input type="text" autocapitalize="none" autofocus placeholder="Make" name = "Make" id="make">
+            </div>
+            <div class="form__input-group">
+                <input type="text"  autofocus placeholder="Model" name = "Model" id="model">
+            </div>
+            <div class="form__input-group">
+                <input type="text"  autofocus placeholder="Year" name = "Year" id="year">
+            </div>
+            <div class="form__input-group">
+                <input type="text"  autofocus placeholder="Drive Train" name = "Drive Train" id="driveTrain">
+            </div>
+            <div class="form__input-group">
+                <input type="text"  autofocus placeholder="Transmission" name = "Transmission" id="transmission">
+            </div>
+            <div class="form__input-group">
+                <input type="text"  autofocus placeholder="Engine" name = "Engine" id="engine">
+            </div>
+            <div class="form__input-group">
+                <input type="text"  autofocus placeholder="Chassis" name = "Chassis" id="chassis">
+            </div>
+            <button class="partSearch__button" onclick="addCar()">Add Car</button>
+            </div> -->
+
+
+
+
+
+
+
+            
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <footer>
+        
+        <div id="left-footer">
+          <h3>Quick Links</h3>
+          <p>
+            <ul>
+              <li>
+                <a href="#">Home</a>
+              </li>
+              <li>
+                <a href="#">Solutions</a>
+              </li>
+              <li>
+                <a href="#">Parts</a>
+              </li>
+              <li>
+                <a href="#">Contact</a>
+              </li>
+              <li>
+                <a href="#">About</a>
+              </li>
+            </ul>
+          </p>
+        </div>
+      </footer>
+
+
+
+      <script>
+
+if(localStorage.getItem('adminLogin') == "false"){
+        document.location.replace('./LoginAdmin.html');
+      }
+
+
+function logout(){
+     localStorage.setItem('adminLogin', "false");
+     document.location.replace('./LoginAdmin.html');
+    }
+let url = "../API/api/car/getAll.php"
+    fetch(url)
+    .then(function (response) {
+    return response.json();
+    })
+    .then(function(obj){
+    localStorage.setObj('myAdminCars', obj.data);   
+    console.log(obj.data);
+    })
+    .catch(function (error) {
+    console.error(error);
+    });
+
+var myArray = JSON.parse(localStorage.getItem('myAdminCars'));
+
+
+buildTable(myArray)
+var make;
+var model;
+var year;
+function buildTable(data){
+    console.log(myArray);
+    var table = document.getElementById('myTable')
+    table.innerHTML = ''
+    for (var i = 0; i < data.length; i++){
+        var colname = `name-${i}`
+        var colage = `age-${i}`
+        var colbirth = `birth-${i}`
+
+
+        make = data[i].make;
+        model = data[i].model;
+        year = data[i].year;
+
+        if (data[i].guide == "NULL"){
+            data[i].guide = "none";
+        }
+        var row = `<tr>
+                        <td>${data[i].make}</td>
+                        <td>${data[i].model}</td>
+                        <td>${data[i].year}</td>
+                        <td><input id = '${make}' class='guideButton' type='button' value='Delete' name = '${model}#${year}'onclick = "return deleteCar(id,name)"/></td>
+    
+                   </tr>`
+        table.innerHTML += row
+    }
+}
+Storage.prototype.setObj = function(key, obj) {
+    return this.setItem(key, JSON.stringify(obj))
+}
+Storage.prototype.getObj = function(key) {
+    return JSON.parse(this.getItem(key))
+}
+
+
+function deleteCar(string, string2) {
+  // localStorage.getItem('password');
+//   console.log(guide);
+
+  let str = string2.split("#"); 
+
+  let string3 = str[0];
+  let string4 = str[1];
+  let url = "../API/api/car/delete.php?make="  + string + "&model=" + string3 +"&year=" +string4 ;
+
+  fetch(url).then(response => response.json()).then(data => {
+          // Work with JSON data here
+
+          console.log(data.Result);
+          if(data.Result == "True"){
+            console.log("Part Deleted");
+            getCars();
+            buildTable(myArray);
+          }
+        }).catch(err => {
+          // Do something for an error here
+          console.log("Error Reading data " + err);
+        });
+}
+
+function getCars(){
+    let url = "../API/api/car/getAll.php"
+    fetch(url)
+    .then(function (response) {
+    return response.json();
+    })
+    .then(function(obj){
+    localStorage.setObj('myAdminCars', obj.data);   
+    document.location.href = './AdminCars.html'; 
+    console.log(obj.data);
+    })
+    .catch(function (error) {
+    console.error(error);
+    });
+}
+
+function showAdd(){
+
+    const carList = document.querySelector("#car-list");
+    const addList = document.querySelector("#add-car");
+
+    addList.classList.remove("form--hidden");
+    carList.classList.add("form--hidden");
+
+    const containerStyles = document.querySelector("#containerStyles");
+
+    containerStyles.classList.remove("container-style");
+    containerStyles.classList.add("container2-style");
+
+}
+
+function addCar(){
+
+        const carList = document.querySelector("#car-list");
+        const addList = document.querySelector("#add-car");
+        const containerStyles = document.querySelector("#containerStyles");
+
+
+        var make = document.getElementById("make").value; 
+        var model = document.getElementById("model").value; 
+        var year = document.getElementById("year").value; 
+        var driveTrain = document.getElementById("driveTrain").value; 
+        var transmission = document.getElementById("transmission").value; 
+        var engine = document.getElementById("engine").value; 
+        var chassis = document.getElementById("chassis").value; 
+        
+
+
+        let url = "../API/api/car/insert.php?make="+ make +
+        "&model="+ model +
+        "&year="+ year +
+        "&transmission="+ transmission + 
+        "&drivetrain="+ driveTrain + 
+        "&engine="+ engine + 
+        "&chassis="+ chassis;
+
+        fetch(url).then(response => response.json()).then(data => {
+        // Work with JSON data here
+
+        console.log(data.Result);
+        if(data.Result == "True"){
+          console.log("Car Added");
+          addList.classList.add("form--hidden");
+          carList.classList.remove("form--hidden");
+          containerStyles.classList.add("container-style");
+          containerStyles.classList.remove("container2-style");
+          getCars();
+          buildTable(myArray);
+        }
+      }).catch(err => {
+        // Do something for an error here
+        console.log("Error Reading data " + err);
+      });
+
+}
+
+function cancelCar(){
+    const partList = document.querySelector("#car-list");
+    const addList = document.querySelector("#add-car");
+    addList.classList.add("form--hidden");
+    partList.classList.remove("form--hidden");
+
+    const containerStyles = document.querySelector("#containerStyles");
+
+    containerStyles.classList.add("container-style");
+    containerStyles.classList.remove("container2-style");
+}
+
+function myAdmin(){
+    location.href = "./Admin.html";
+}
+</script>
+      <script src="main.js"></script>
+    
+  </body>
+</html>
